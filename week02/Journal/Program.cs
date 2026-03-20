@@ -23,8 +23,10 @@ class Program
             Console.Write("What would you like to do? ");
             string input = Console.ReadLine();
 
-            // The below line of code basically works like this. you have the int.TryParse. it takes in one variable and will try to output another.
-            // the first variable is the one you want to be parsed if possible. the out means it is outputting whatever comes next. Therefore, I am
+            // The below line of code basically works like this. you have the int.TryParse. it takes in one variable and will try to output
+            //  another.
+            // the first variable is the one you want to be parsed if possible. the out means it is outputting whatever comes next. 
+            // Therefore, I am
             // outputting an integer variable named choice, if possible. However, I need it in the if statement, so it will be in there.
             
             if (int.TryParse(input, out choice) && choice == 1 )
