@@ -1,0 +1,62 @@
+ 
+ these notes are for me to help remember what is considered important in the class.
+ If you are looking over this as a grader and for some reason it is not ok for me to have this for personal use,
+ please notify me and I will delete it.
+
+ Question 1
+ What is the primary goal of abstraction in programming?
+  To simplify a component by removing the implementation details.
+  this seems a bit weird, but it is entirely true. For each assignment I have been given an outline with none of the code.
+  It has been quite helpful to use this principle.
+
+ 
+Question 2
+In object-oriented programming, abstraction is typically achieved using:
+  Classes
+  a class essentially is a separate file that does a specific thing.
+ 
+Question 3
+What is the relationship between a class and an instance?
+  Classes are like templates. Instances are the actual objects created in memory, using that template.
+  This will be helpful to remember as I have found this very confusing. It is a lot like the tool part molds
+  from tinkers construct. I create a mold, and then that can be used to create multiple of the same piece, but it can'talk
+  be used to make other pieces.
+ 
+Question 4
+Objects can contain other objects as member variables.
+  True. 
+  I am fairly certain I have had to do this in most assignments, however nothing specific comes to mind.
+ 
+Question 5
+What is a method?
+  A member function of a class. 
+  For my little brain, it is simply a function.
+ 
+Question 6
+What is encapsulation in object-oriented programming?
+  The technique of hiding the internal implementation details and protecting the data.
+  I don't really have any notes to add on this one.
+ 
+Question 7
+When we talk about information hiding in a program, who are we hiding it from?
+  Other parts of the program.
+  Although there are many technical answers, this is the best one. I don't really know why though.
+  I think it is because if they are hidden from the same program, it is more difficult for people to
+  access it in general.
+ 
+Question 8
+1 / 1 pts
+Methods can call other methods.
+  True
+  remember, methods are just functions, and functions can call functions.
+ 
+Question 9
+Why might blindly creating getters and setters be a bad idea?
+  Because they are exposing the way the data is stored internally, reducing the benefits of information hiding.
+  If you are gonna go through the effort of hiding what you have going on internally, direct references and access to such
+  things is kind of the big stupid.
+ 
+Question 10
+In C#, if you do not define any constructors what happens?
+  It will create a default, no-argument constructor for you.
+  this is true. however, if you have argument constructors and still need a non argument constructor, you have to make one.
