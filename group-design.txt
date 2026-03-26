@@ -1,0 +1,104 @@
+Youtube Video
+
+    Class: Video
+
+    make sure variables are privated.
+    Variables:
+        _title: string
+        _author: string
+        _length: int
+        _comment: List<Comment>
+
+    Constructors:
+    Video()
+    Video(title, author, length)
+
+    Methods:
+    public int GetNumberOfComments()
+        {
+            return _comment.Count()
+        }
+
+    public string displayVideo() 
+    {
+        return _title, _author, _length, 
+    }
+
+    Class: Comment
+    Variables:
+    _commentName: string
+    _commentText: string
+
+    Constructors:
+    Comment()
+    Comment(commentName, commentText)
+
+    Methods:
+    DisplayComment(): string
+        return _commentName, _commentText
+
+
+
+
+
+Online Ordering
+
+Class: Product
+    _productName: string
+    _productID: string (however, in a real world the customer may choose it to be other variable type)
+    _productPrice: double
+    _productQuantity: int
+    _productTotal: double
+
+    Constructor:
+    public Product(productName, productID, productPrice, productQuantity)
+    public Product(productName, productID, productPrice, productQuantity, productTotal)?
+    dont know if I should have the second constructor. definitely not since the total is being formed
+    here.
+
+    Method:
+    public double CalculateProductTotal(): 
+        return _productQuantity * _productPrice
+
+Class: Customer
+    _customerName: string
+    _customerAddress: Address
+    _isInUsa: bool
+
+    Constructor:
+    Customer(customerName)
+
+    public bool InUsa(): return true or false.
+
+Class: Address
+    _street: string
+    _city: string
+    _state: string
+    _country: string
+
+    Constructor:
+
+    Methods:
+
+    public bool InUsa(): return true or false
+
+    public string DisplayAddress(): return _street _city _state _country _isInUsa
+
+
+Class: Order
+    _products: List
+    _customer: object (will use the Customer class)
+    _orderTotal: double
+
+    Constructor:
+
+    Methods:
+    Return string ShippingLabel()
+
+    Return string PackingLabel()
+
+    Return Bool IsInUsa()
+
+
+
+
