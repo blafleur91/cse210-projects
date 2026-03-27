@@ -21,5 +21,10 @@ public class Product
         return _productPrice * _productQuantity;
     }
 
+    public string DisplayProducts()
+    {
+        return $"Product {_productName}| ID: {_productID}| Amount: {_productQuantity}";
+    }
+
     
 }
