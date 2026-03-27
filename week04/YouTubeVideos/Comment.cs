@@ -19,6 +19,6 @@ public class Comment
 
     public string DisplayComment()
     {
-        return $"{_commentName} {_commentText}";
+        return $"Name: {_commentName}| Comment: {_commentText}";
     }
 }

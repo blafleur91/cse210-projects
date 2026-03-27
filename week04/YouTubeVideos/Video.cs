@@ -8,7 +8,7 @@ public class Video
     private string _title;
     private string _author;
     private int _length;
-    private List<Comment> _comment;
+    private List<Comment> _comment = new List<Comment>();
 
     public Video()
     {
@@ -26,7 +26,21 @@ public class Video
 
     public string DisplayVideo()
     {
-        return $"{_title} {_author} {_length}";
+        return $"Video Title: {_title}| Author: {_author}| Length in Seconds: {_length}";
+    }
+
+    public void DisplayVideoComments()
+    {
+        foreach (var comment in _comment)
+        {
+            Console.WriteLine(comment.DisplayComment());
+        }
+    }
+
+    public void VideoComments(string commentName, string commentText)
+    {
+        Comment comment = new Comment(commentName, commentText);
+        _comment.Add(comment);
     }
 
     public int GetNumberOfComments()

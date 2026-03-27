@@ -11,15 +11,19 @@ public class Journal
 
     public void DisplayAll()
     {
-        // I originally had this set to one, but ChatGpt told me that the lists indexes do in fact work like python, despite googling it saying otherwise.
+        // I originally had this set to one, but ChatGpt told me that the lists indexes do in fact work like python, despite google
+        //  saying otherwise.
         // I tested and this does work, so I am annoyed almost everything I looked at through google said otherwise.
         int i = 0;
         int length = _entries.Count();
-        // Previously I had this being i is greater then or equal to. That obviously wouldn't work. Also, less then or equal to doesn't work either.
-        // I'm pretty sure this is exctly like python, where the length (.Count()) is one more then the indexes as it counts starting at one.
+        // Previously I had this being i is greater then or equal to. That obviously wouldn't work. Also, less then or equal to 
+        // doesn't work either.
+        // I'm pretty sure this is exctly like python, where the length (.Count()) is one more then the indexes as it counts starting 
+        // at one.
         while (i < length)
         {
-            // previously I had Console.WriteLine(_entries[i]). Apparently that doesn't work. so the line below works by calling the list, giving it an index,
+            // previously I had Console.WriteLine(_entries[i]). Apparently that doesn't work. so the line below works by calling the 
+            // list, giving it an index,
             // and running it through the display in entry.cs, which is what the the professors were wanting.
             _entries[i].Display();
             i++;
