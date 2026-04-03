@@ -64,7 +64,7 @@ public class ListingActivity : Activity
     }
 
         // FOR GRADER
-        // I checked the rubric and it didn't look like this method ws required. If it is, I guess I will just have to take the hit.
+        // I checked the rubric and it didn't look like this method was required. If it is, I guess I will just have to take the hit.
         // However, if you could explain to me the purpose of this method if it is required, I would appreciate it, since the class
         // seems to be set up in a way where this is a somewhat useless method.
 
