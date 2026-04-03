@@ -5,9 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
         string input;
         input = "";
+
+        // The way that I have improved this program is by making sure that there are no repeat questions on the reflecting activity
+        // until it has gone through all the questions.
 
         while (input != "4")
         {
@@ -20,31 +22,30 @@ class Program
             Console.Write("Select a choice from the menu: ");
             input = Console.ReadLine();
 
+            BreathingActivity breathingActivity = new BreathingActivity();
+            ReflectingActivity reflectingActivity = new ReflectingActivity();
+            ListingActivity listingActivity = new ListingActivity();
+
             if (input == "1")
             {
-                BreathingActivity breathingActivity = new BreathingActivity();
-                breathingActivity.DisplayStartingMessage();
-                // input whichever code and function is needed here.
-                breathingActivity.DisplayEndingMessage();
+                breathingActivity.Run();
             }
+
             else if (input == "2")
             {
-                ReflectingActivity reflectingActivity = new ReflectingActivity();
-                reflectingActivity.DisplayStartingMessage();
-                // input needed code to make it work.
-                reflectingActivity.DisplayEndingMessage();
+                reflectingActivity.Run();
             }
+
             else if (input == "3")
             {
-                ListingActivity listingActivity = new ListingActivity();
-                listingActivity.DisplayStartingMessage();
-                // input needed code here
-                listingActivity.DisplayEndingMessage();
+                listingActivity.Run();
             }
+
             else if (input == "4")
             {
                 break;
             }
+            
             else
             {
                 Console.WriteLine("You have input an invalid value. Please enter one of the four numbers.");
