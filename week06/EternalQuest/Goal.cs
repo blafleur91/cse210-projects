@@ -2,18 +2,20 @@
 
 public abstract class Goal
 {
-    private string _shortName;
-    private string _description;
-    private string _points;
+    // I had to switch these variables to protected because I don't have a getter for each one and
+    // I was constantly running into problems of not having any access to them.
+    protected string _shortName;
+    protected string _description;
+    protected int _points;
 
-    public Goal(string name, string description, string points)
+    public Goal(string name, string description, int points)
     {
         _shortName = name;
         _description = description;
         _points = points;
     }
 
-    public abstract void RecordEvent();
+    public abstract int RecordEvent();
     // RecordEvent - This method should do whatever is necessary for each specific kind of goal, such as marking a simple goal 
     // complete and adding to the number of times a checklist goal has been completed. It should return the point value associated 
     // with recording the event (keep in mind that it may contain a bonus in some cases if a checklist goal was just finished, 

@@ -1,0 +1,9 @@
+2135
+5
+4000
+SimpleGoal:quack,smack,50,False
+SimpleGoal:smack,quack,40,True
+EternalGoal:Scripture,Read dem,25
+ChecklistGoal:Eat,Food time,15,5,150,3
+SimpleGoal:bop,bop,250,True
+ChecklistGoal:boop,beeop,250,3,1000,3

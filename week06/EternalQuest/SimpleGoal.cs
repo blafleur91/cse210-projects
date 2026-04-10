@@ -5,25 +5,38 @@ using System.Security.Cryptography.X509Certificates;
 public class SimpleGoal : Goal
 {
 
-    private bool _iscomplete;
+    private bool _isComplete;
 
-    public SimpleGoal(string name, string description, string points) : base (name, description, points)
+    public SimpleGoal(string name, string description, int points) : base (name, description, points)
     {
-        _iscomplete = false;
+        _isComplete = false;
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        
-    }
+        _isComplete = IsComplete();
+        return _points;
+    }   
 
     public override bool IsComplete()
     {
         return true;
     }
 
+    public override string GetDetailsString()
+    {
+        if (_isComplete == false)
+        {
+            return base.GetDetailsString();
+        }
+        else
+        {
+            return $". [X] {_shortName} ({_description})";
+        }
+    }
+
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"SimpleGoal:{_shortName},{_description},{_points},{_isComplete}";
     }
 }
