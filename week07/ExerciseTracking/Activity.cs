@@ -2,9 +2,7 @@
 
 public abstract class Activity
 {
-    protected float _distance;
-    protected float _speed;
-    protected float _pace;
+    // protected double _pace;
     protected string _date;
     protected int _length;
 
@@ -21,14 +19,14 @@ public abstract class Activity
 
     public virtual void GetSummary()
     {
-        Console.WriteLine($"{_date} {GetActivityName()} ({_length}): Distance {_distance} miles, Speed {_speed} mph, Pace: {GetPace()} min per mile");
+        Console.WriteLine($"{_date} {GetActivityName()} ({_length}): Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile");
     }
 
-    public abstract float GetDistance();
+    public abstract double GetDistance();
 
-    public abstract float GetSpeed();
+    public abstract double GetSpeed();
 
-    public abstract float GetPace();
+    public abstract double GetPace();
 
     public abstract string GetActivityName();
 }
